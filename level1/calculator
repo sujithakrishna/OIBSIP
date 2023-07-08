@@ -3,7 +3,7 @@
 <head>
 <title>calculator</title>
    <style>
-  
+      
       *{
          padding:0;
          margin:0;
@@ -32,7 +32,7 @@
          padding: 3px 6px;
          outline: none;
          font-size: 40px;
-         border: 5px greeN;
+         border: 5px green;
          display: flex;
          margin: auto;
          border-radius: 6px;
@@ -40,7 +40,7 @@
       }
       .btn input[type='button']{
          width:90px;
-         padding: 2px;
+         padding: 3px;
          margin: 2px 0px;
          position: relative;
          left: 13px;
@@ -56,6 +56,9 @@
       .btn input[type='button']:hover{
          background-color:#8b0000		;
          color: rgb(119, 218, 193);
+      }
+      body{
+         background-image: url("https://cdn.fansshare.com/image/wallpaper1080p/cool-abstract-hd-wallpapers-wallpaper-hd-borders-magazine-abyss-removal-maker-for-phone-steamer-wide-calculator-cool-wallpaper-hd-87833956.jpg");
       }
    </style>
    <script>
@@ -77,9 +80,12 @@
          ev.value = ev.value.slice(0,-1);
       }
    </script>
-   <title>Calculatorr</title>
+   <title>Calculator</title>
 </head>
 <body>
+   <div>
+    <p>calculator</p>
+   </div>
    <div class="main">
       <input type="text" id = 'res'>
       <div class="btn">
