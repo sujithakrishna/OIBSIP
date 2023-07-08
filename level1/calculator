@@ -9,12 +9,7 @@
          margin:0;
          font-family: 'poppins', Arial;
       }
-      body{
-	     background-image:url('math.jpg');
-         display: grid;
-         height: 100vh;
-         place-items:center;
-      }
+      
       .main{
          width: 400px;
          height: 450px;
