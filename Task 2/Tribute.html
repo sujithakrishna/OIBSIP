@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * {
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 180%;
+    color: #000;
+    max-width: 1080px;
+    height: 100%;
+    margin: 0 auto;
+    float: none;
+    padding: 0;
+    overflow-y: scroll;
+    border: 12px solid #ebe7e7;
+  }
+  .container {
+    max-width: 100px; /* Adjust the maximum width as per your requirement */
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+
+  header {
+     font-size: 40px; /* Increase the font size */
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #92bee9;
+    border: 12px solid #ebe7e7;
+    text-align: center;
+  }
+
+  .title {
+    display: block;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    text-transform: none;
+    float: left;
+    color: #fff;
+  }
+
+.tribute {
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    text-transform: none;
+  }
+
+  header #navigation {
+    float: right;
+  }
+
+  #navigation ul li {
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #navigation ul li:last-child {
+    margin-right: 0;
+  }
+
+  #navigation ul li a {
+    font-size: 22px;
+    font-weight: bolder;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+    padding-bottom: 10px;
+  }
+
+  #navigation ul li a:hover {
+    color: #ddc070;
+    text-decoration: underline;
+    transition: all ease-in 0.2s;
+  }
+
+  #main .caption {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  #main p {
+    text-align: justify;
+  }
+
+  #personal-life {
+    color: #fff;
+    background: #e3f074;
+  }
+
+  #personal-life img {
+    height: 282px;
+  }
+
+  #career,
+  #personal-life,
+  #intro,
+  #facts,
+  #death,
+  #filmography {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #fff;
+  }
+
+  .section-title {
+    font-weight: bolder;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+
+  .section-title:after {
+    content: '';
+    display: block;
+    border: 2px solid #fff;
+    margin-top: 10px;
+    width: 70px;
+  }
+
+  #intro {
+    padding-top: 40px;
+    background: #92bee9;
+  }
+
+  #career {
+    background: #9cf3cf;
+  }
+
+  #death {
+    background: #8ae9e4;
+  }
+
+  #death blockquote {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  #death blockquote footer {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  #nonviolence {
+    background: #66accc;
+  }
+
+  #literary {
+    background: #b1b4e2;
+  }
+
+  #main .fa {
+    font-size: 20px;
+  }
+
+  .thumbnail {
+    margin-bottom: 5px;
+  }
+
+  #literary table,
+  th,
+  td,
+  tr {
+    border: 2px solid hsl(0, 0%, 7%);
+  }
+
+  #death a {
+    color: #282828;
+    font-weight: bold;
+  }
+
+  #death a:hover {
+    transition: ease-in 0.2s;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  th {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  tbody td:nth-child(2) {
+    font-weight: bold;
+    width: 200px;
+  }
+
+  tbody td:nth-child(3) {
+    text-align: center;
+  }
+
+  th,
+  td,
+  tr {
+    padding: 10px 15px;
+  }
+
+  .website {
+    padding-top: 30px;
+    font-size: 30px;
+  }
+
+  #footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #282828;
+    color: #fff;
+  }
+
+  #footer p {
+    margin: 0;
+  }
+
+  #footer a {
+    color: #fff;
+  }
+
+  #footer a:hover {
+    text-decoration: underline;
+    transition: all linear 0.2s;
+  }
+
+  #footer .project {
+    float: right;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+
+  .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .col-md-4,
+  .col-md-5,
+  .col-md-6,
+  .col-md-7,
+  .col-md-8 {
+    flex: 0 0 auto;
+    padding: 0 10px;
+  }
+
+  .img-responsive {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+  <header id="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title">Mahatma Gandhi
+            <span class="tribute">A Tribute Page</span>
+          </div>
+          <nav id="navigation">
+            <ul class="list-unstyled list-inline">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="#career">Education</a></li>
+              <li><a href="#personal-life">Personal Life</a></li>
+              <li><a href="#facts">Non-Violence</a></li>
+              <li><a href="#filmography">Literary Works</a></li>
+              <li><a href="#death">Legacy</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="main">
+    <div id="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 section-title">Introduction</div>
+          <div class="col-md-12">
+             <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Mahatma-Gandhi%2C_studio%2C_1931.jpg"  width="400" height="400" alt="Mahatma-Gandhi" />
+        <figcaption class="caption">Mahatma Gandhi</figcaption>
+      </div>	
+      <div class="col-md-12">
+        <p style="color:#000000"><strong>Mahatma Gandhi</strong> (2 October 1869 &#45; 30 January 1948) was an Indian lawyer,
+          anti-colonial nationalist and political ethicist who employed nonviolent resistance to lead 
+          the successful campaign for India's independence from British rule.He inspired movements for civil 
+          rights and freedom across the world. The honorific Mahātmā (Sanskrit: "great-souled", "venerable"), 
+          first applied to him in 1914 in South Africa, is now used throughout the world.</p>
+
+        <p style="color:#000000">
+          Assuming leadership of the Indian National Congress in 1921, Gandhi led nationwide campaigns 
+          for easing poverty, expanding women's rights, building religious and ethnic amity, ending untouchability, and, 
+          above all, achieving swaraj or self-rule. Gandhi adopted the short dhoti woven with 
+          hand-spun yarn as a mark of identification with India's rural poor.
+
+          
+
+        </p>
+
+        
+      
+      
+
+      
+    </div>
+  </div>
+  </div>
+
+  <div id="career">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 section-title">Education</div>
+          
+            <div class="col-md-12">
+
+              <p style="color:#000000">At age 9, Gandhi entered the local school in Rajkot, near his home. There, he studied the 
+                rudiments of arithmetic, history, the Gujarati language and geography.At the age of 11, he joined the 
+                High School in Rajkot, Alfred High School.He was an average student, won some prizes, but was a shy
+                 and tongue tied student, with no interest in games; his only companions were books
+                  and school lessons.</p>
+              <p style="color:#000000">
+                n May 1883, the 13-year-old Mohandas was married to 14-year-old Kasturbai Makhanji Kapadia 
+                (her first name was usually shortened to "Kasturba", and affectionately to "Ba") 
+                in an arranged marriage, according to the custom of the region at that time.
+                In the process, he lost a year at school but was later allowed to make up by accelerating his studies.
+              </p>
+              <p style="color:#000000">Gandhi had dropped out of the cheapest college he could afford in Bombay.Mavji Dave Joshiji, a Brahmin priest and 
+                family friend, advised Gandhi and his family that he should consider law studies in London.</p>
+
+                <p style="color:#000000"> he sailed from Bombay to London, with his brother seeing him off.Gandhi attended University 
+                  College, London, where he took classes in English literature with Henry Morley in 1888–1889.
+                  He also enrolled at the Inns of Court School of Law in Inner Temple with the intention of becoming a 
+                  barrister. His childhood shyness and self-withdrawal had continued through his teens. 
+                  He retained these traits when he arrived in London, 
+                  but joined a public speaking practice group and overcame his shyness sufficiently to practise law.</p>
+              
+              </div>
+              <div class="col-md-5">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Gandhi_student.jpg" class="img-responsive thumbnail">
+              </div>
+              <div class="col-md-12">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="personal-life">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 section-title">PERSONAL LIFE</div>
+          
+            
+            <div class="col-md-12">
+        <p style="color:#000000">
+          Mohandas Karamchand Gandhi[41] was born on 2 October 1869 into a Gujarati Hindu Modh Bania family
+          in Porbandar (also known as Sudamapuri), a coastal town on the Kathiawar Peninsula and then 
+          part of the small princely state of Porbandar in the Kathiawar Agency of the British Raj. 
+          His father, Karamchand Uttamchand Gandhi (1822–1885), served as the dewan (chief minister) of 
+          Porbandar state.His family originated from the then village of Kutiana in what was 
+          then Junagadh State.
+        </p>
+
+        <p style="color:#000000">
+          Although he only had an elementary education and had previously been a clerk in the state administration, 
+          Karamchand proved a capable chief minister.[47] During his tenure, he married four times. His first 
+          two wives died young, after each had given birth to a daughter, and his third marriage was childless.</p>
+
+        <p style="color:#000000">In 1874, Gandhi's father Karamchand left Porbandar for the smaller state of Rajkot, where he became a 
+          counsellor to its ruler, the Thakur Sahib; though Rajkot was a less prestigious state than Porbandar, 
+          the British regional political agency was located there, which gave the state's diwan a measure of 
+          security.In 1876, Karamchand became diwan of Rajkot
+          and was succeeded as diwan of Porbandar by his brother Tulsidas. His family then rejoined him in Rajkot</p>
+        </div>
+
+        <div class="col-md-12">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Gandhi_and_Laxmidas_2.jpg" />
+        </div>
+        
+        <div class="col-md-12">
+        <p style="color:#000000">
+          In November 1887, the 18-year-old Gandhi graduated from high school in Ahmedabad.In January 1888, 
+          he enrolled at Samaldas College in Bhavnagar State, then the sole degree-granting institution 
+          of higher education in the region. However, he dropped out, and returned to his family in Porbandar.
+        </p>
+        <p style="color:#000000">
+          He demonstrated a keen interest in the welfare of London's impoverished dockland communities. In 1889, 
+          a bitter trade dispute broke out in London, with dockers striking for better pay
+          and conditions, and seamen, shipbuilders, factory girls and other joining the strike in solidarity. 
+        </p>
+        <div class="col-md-6">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/MAHATMA_GANDHI_1869-1948_lived_here_as_a_law_student.jpg" class="img-responsive thumbnail">
+        </div>
+        <p style="color:#000000">
+          The strikers were successful, in part due to the mediation of Cardinal Manning, leading Gandhi 
+          and an Indian friend to make a point of visiting the cardinal and thanking him for his work.
+        </p>
+        <p style="color:#000000">In April 1893, Gandhi aged 23, set sail for South Africa to be the lawyer for Abdullah's cousin.
+           He spent 21 years in South Africa, where he developed his political views, ethics and politics.
+        </p>
+        <p style="color:#000000">Gandhi joined the Indian National Congress and was introduced to Indian issues, politics and the 
+          Indian people primarily by Gokhale. Gokhale was a key leader of the Congress Party best known for his 
+          restraint and moderation, and his insistence on working inside the system. Gandhi took 
+          Gokhale's liberal approach based on British Whiggish traditions and transformed it to make it look Indian.
+        </p>
+      </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div id="nonviolence">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 section-title">Non-Violence</div>
+
+            <div class="col-md-12">
+              <p style="color:#000000"><strong>On wars and non-violence</strong></p>
+              <p style="color:#000000">Gandhi participated in forming the Indian Ambulance Corps in the South African war against the Boers, 
+                on the British side in 1899.Both the Dutch settlers called Boers and the imperial British at that 
+                time discriminated against the coloured races they considered as inferior, and Gandhi later wrote about 
+                his conflicted beliefs during the Boer war. He stated that "when the war was declared, my personal 
+                sympathies were all with the Boers, but my loyalty to the British rule drove me to participation with the British in that war.</p>
+            
+              <p style="color:#000000">During World War I (1914–1918), nearing the age of 50, Gandhi supported the British and its allied forces 
+                by recruiting Indians to join the British army, expanding the Indian contingent from about 100,000 to 
+                over 1.1 million.He encouraged Indian people to fight on one side of the war in Europe 
+                and Africa at the cost of their lives.</p>
+              
+              <p style="color:#000000">After World War II engulfed Britain, Gandhi actively campaigned to oppose any help to the British war 
+                effort and any Indian participation in the war by launching Quit India Movement. According to Arthur 
+                Herman, Gandhi believed that his campaign would strike a blow to imperialism.The British government 
+                responded with mass arrests including that of Gandhi and Congress leaders and killed over 1,000 Indians who participated in this movement.</p>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+        
+      <div id="literary">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 section-title">Literary Works</div>
+
+            <div class="col-md-12">
+              <div class="col-md-6">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Young_India.png"/>
+                </div>
+              </div>
+           
+              <p style="color:#000000">Gandhi was a prolific writer. His signature style was simple, precise, clear and as devoid of 
+                artificialities. One of Gandhi's earliest publications, Hind Swaraj, 
+                published in Gujarati in 1909, became "the intellectual blueprint" for India's independence movement. </p>
+              
+                <p style="color:#000000">The book was translated into English the next year, with a copyright legend that read "No Rights 
+                Reserved".For decades he edited several newspapers including Harijan in Gujarati, in Hindi and 
+                in the English language; Indian Opinion while in South Africa and, Young India, in English, and Navajivan, 
+                a Gujarati monthly, on his return to India. Later, Navajivan was also
+                 published in Hindi. In addition, he wrote letters almost every day to individuals and newspapers.</p>
+
+                <p style="color:#000000">Gandhi also wrote several books including his autobiography, The Story of My Experiments with Truth 
+                  (Gujarātī "સત્યના પ્રયોગો અથવા આત્મકથા"), of which he bought the entire first edition to make sure it was 
+                  reprinted.His other autobiographies included: Satyagraha in South Africa about his struggle there,
+                  Hind Swaraj or Indian Home Rule, a political pamphlet, and 
+                  a paraphrase in Gujarati of John Ruskin's Unto This Last which was an early critique of political economy.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="death">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 section-title">Legacy</div>
+            
+             <div class="col-md-12">
+              <p style="color:#000000">
+                Gandhi is noted as the greatest figure of the successful Indian independence movement 
+                against the British rule. He is also hailed as the greatest figure of modern India.American historian 
+                Stanley Wolpert described Gandhi as "India's greatest revolutionary nationalist leader" and the greatest 
+                Indian since the Buddha. In 1999, Gandhi was named "Asian of the century" 
+                by Asiaweek.In a 2000 BBC poll, he was voted as the greatest man of the millennium.
+              </p>
+
+            </div>
+            
+            <div class="col-md-12">
+              <p style="color:#000000">Gandhi influenced important leaders and political movements.Leaders of the civil rights movement in the 
+                United States, including Martin Luther King Jr.James Lawson, and James Bevel, 
+                drew from the writings of Gandhi in the development of their own theories about nonviolence.</p>
+            </div>
+            <div class="col-md-12">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Mahatmagandhi.jpg" alt="statue" width="400" height="400" class="img-responsive thumbnail"/>
+            </div>
+            <div class="col-md-12">
+
+              <p style="color:#000000"> Gandhi's life and teachings inspired many who specifically referred to Gandhi as their mentor or 
+                who dedicated their lives to spreading Gandhi's ideas. In Europe, Romain Rolland was the first to 
+                discuss Gandhi in his 1924 book Mahatma Gandhi, and Brazilian anarchist and feminist Maria Lacerda 
+                de Moura wrote about Gandhi in her work on pacifism. In 1931, physicist Albert Einstein exchanged 
+                letters with Gandhi, and called him "a 
+                role model for the generations to come" in a letter writing about him.</p>
+              
+                
+
+              
+              <p style="color:#000000">Indians widely describe Gandhi as the father of the nation.Origin of this title is traced 
+                back to a radio address (on Singapore radio) on 6 July 1944 by Subhash Chandra Bose where Bose 
+                addressed Gandhi as "The Father of the Nation".On 28 April 1947, Sarojini Naidu during a conference 
+                also referred Gandhi as "Father of the Nation".He is also conferred the title "Bapu"(Gujarati: 
+                endearment for father,papa).</p>
+            </div>
+            
+              <div id="legacy">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12 section-title">Death</div>
+                    
+                     <div class="col-md-12">
+                  
+               <p style="color:#000000">On January 30 1948,Assassination of Mahatma Gandhi: At 5:17 p.m. Indian Standard Time, 
+                Mahatma Gandhi was assassinated by 
+                Nathuram Godse on the steps of the Birla House in New Delhi.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Gandhi_Smriti_Delhi.jpg" width="400" height="400" po alt="smriti" class="img-responsive thumbnail"/>
+                
+                <p style="color:#000000">Godse was captured by members of the crowd—the most widely reported of whom was Herbert Reiner Jr,
+                   a vice-consul at the American embassy in Delhi—and handed over to the police. The Gandhi murder 
+                   trial opened in May 1948 in Delhi's historic Red Fort, with Godse the main defendant, and his 
+                   collaborator Narayan Apte, and six more, deemed co-defendants. The trial was rushed through, 
+                   the haste sometimes attributed to the home minister 
+                  Vallabhbhai Patel's desire "to avoid scrutiny for the failure to prevent the assassination."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+      
+
+</div>
+</div>
+
+</body>
+</html>
